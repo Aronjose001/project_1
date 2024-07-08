@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Recommendations</title>
+</head>
+<body>
+    <h1>Top Three Product Recommendations</h1>
+    <ul>
+        {% for product in recommendations %}
+        <li>{{ product.product_name }} (Product ID: {{ product.product_id }}, Count: {{ product.count }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
+
