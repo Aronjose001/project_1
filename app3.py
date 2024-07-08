@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask
 from pymongo import MongoClient
 import pandas as pd
 
@@ -92,8 +92,10 @@ def home():
     # Convert the recommendations to a list of dictionaries
     recommendations = top_three_recommendations.to_dict(orient='records')
 
-    return render_template('index.html', recommendations=recommendations)
+    print('index.html')
+    print(top_three_recommendations)
+    print(recommendations)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug = True)
